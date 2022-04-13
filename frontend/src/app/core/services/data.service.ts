@@ -12,4 +12,8 @@ export class DataService {
   getAllPokemons(): Observable<any> {
     return this.http.get<any>(`${environment.api}/pokemon?limit=10`);
   }
+
+  getDetail(name: string): Observable<any> {
+    return this.http.get(`${environment.api}/pokemon/${name}`);
+  }
 }

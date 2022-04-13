@@ -1,17 +1,11 @@
-import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatInputModule} from '@angular/material/input';
+import { NgModule } from '@angular/core';
+import { MatInputModule } from '@angular/material/input';
 import { SharedModule } from '../shared/shared.module';
-
-
+import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatInputModule,
-    SharedModule
-  ],
-  declarations: [PokemonListComponent],
+  imports: [CommonModule, MatInputModule, SharedModule],
+  declarations: [PokemonListComponent]
 })
-export class MainModule { }
+export class MainModule {}
