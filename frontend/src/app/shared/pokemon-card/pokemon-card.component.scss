@@ -1,16 +1,38 @@
-.mat-card-header{
-  background-color:#673ab7 !important;
-  padding:5px !important;
+.mat-card-header {
+  background-color: #673ab7 !important;
+  padding: 5px !important;
 }
 
-.mat-card{
-  padding:0 !important;
+.icon-types {
+  height: 30px;
+  width: 30px;
 }
 
-.mat-card-content{
-  padding:5px !important;
+.mat-card {
+  padding: 0 !important;
+}
+
+.mat-card-content {
+  padding: 5px !important;
 }
 
 .mat-card-actions {
   margin-left: 12px;
+}
+
+.custom-btn {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem rem;
+}
+
+.poision {
+  background-color: #673ab7;
+  color: #fff;
 }

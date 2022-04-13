@@ -1,19 +1,36 @@
 <mat-card class="example-card">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-title class="mt-2 text-white">{{ name.charAt(0).toUpperCase() + name.slice(1) }}</mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
   </mat-card-header>
-  <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
-    <mat-card-actions>
+  <mat-card-content class="mx-3">
+    <div class="row">
+      <div class="col-md-8">
+        <p>
+          <b>Altura:</b> {{ height }}
+        </p>
+        <p>
+          <b>Saúde:</b> {{ health }}
+        </p>
+        <p>
+          <b>Poder de ataque:</b> {{ attackPower }}
+        </p>
+
+        <div>
+          <b>Tipo:</b> <br>
+          <img *ngFor="let type of types" class="icon-types" src="/assets/images/types/{{ type.type.name }}.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img [src]="image" alt="pokemon-image">
+      </div>
+    </div>
+
+    <!-- <span  class="mx-1 custom-btn" [ngClass]="backgroundType(type.type.name)"></span> -->
+    <!-- <mat-card-actions>
       <button mat-button>LIKE</button>
       <button mat-button>SHARE</button>
-    </mat-card-actions>
+    </mat-card-actions> -->
   </mat-card-content>
 
 </mat-card>
