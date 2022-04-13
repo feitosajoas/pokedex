@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
@@ -120,6 +121,7 @@
   },
   "defaultProject": "frontend",
   "cli": {
+    "analytics": "29dc9dff-aadb-4f7b-aba4-9b35b2f8d584",
     "defaultCollection": "@angular-eslint/schematics"
   }
 }
