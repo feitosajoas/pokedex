@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CookieHelper } from 'src/app/core/utils/cookie-helper';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -16,5 +17,10 @@ export class PokemonCardComponent {
 
   getName() {
     return this.name.charAt(0).toUpperCase() + this.name.slice(1);
+  }
+
+  onFavorite(name: string) {
+    console.log(name);
+    return CookieHelper.setFavoritePokemon(name);
   }
 }
