@@ -1,8 +1,7 @@
 /* tslint:disable:no-unused-variable */
+import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { DataService } from 'src/app/core/services/data.service';
 import { PokemonListComponent } from './pokemon-list.component';
 
 describe('PokemonListComponent', () => {
@@ -11,9 +10,10 @@ describe('PokemonListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PokemonListComponent ]
-    })
-    .compileComponents();
+      declarations: [PokemonListComponent],
+      imports: [HttpClientModule],
+      providers: [DataService]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
