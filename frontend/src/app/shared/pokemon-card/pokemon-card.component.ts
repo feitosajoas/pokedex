@@ -20,7 +20,9 @@ export class PokemonCardComponent {
   }
 
   onFavorite(name: string) {
-    console.log(name);
+    if (CookieHelper.getFavoritePokemons().includes(name)) {
+      return CookieHelper.getFavoritePokemons().replace(name, '');
+    }
     return CookieHelper.setFavoritePokemon(name);
   }
 }
