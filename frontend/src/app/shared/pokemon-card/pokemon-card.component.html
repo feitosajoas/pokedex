@@ -1,7 +1,8 @@
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="mx-2 tetx-white mb-0">
-      <i class="far mt-2 fa-2x fa-star" (click)="onFavorite(name)"></i>
+      <i class="far mt-2 fa-2x fa-star" (click)="onFavorite(name)" *ngIf="!isFavorite"></i>
+      <i class="fas mt-2 fa-2x fa-star" (click)="unFavorite(name)" *ngIf="isFavorite"></i>
     </div>
     <mat-card-title class="mt-2 text-white">{{ getName() }}</mat-card-title>
   </mat-card-header>
