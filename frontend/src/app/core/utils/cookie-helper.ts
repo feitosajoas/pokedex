@@ -17,11 +17,15 @@ export class CookieHelper {
   }
 
   static setFavoritePokemon(id: string) {
-    localStorage.setItem(this.favPokemon, this.getFavoritePokemons() + `|${id}`);
+    localStorage.setItem(id, id);
   }
 
-  static getFavoritePokemons(): string {
-    return localStorage.getItem(this.favPokemon) ?? '';
+  static unFavoritePokemon(id: string) {
+    localStorage.removeItem(id);
+  }
+
+  static getFavoritePokemons(id: string): string {
+    return localStorage.getItem(id) ?? '';
   }
 
   static setPermissions(cookie: Cookie) {
