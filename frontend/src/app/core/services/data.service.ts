@@ -9,8 +9,8 @@ import { environment } from 'src/environments/environment';
 export class DataService {
   constructor(private http: HttpClient) {}
 
-  getAllPokemons(): Observable<any> {
-    return this.http.get<any>(`${environment.api}/pokemon?limit=10`);
+  getAllPokemons(limit: number, offset: number): Observable<any> {
+    return this.http.get<any>(`${environment.api}/pokemon?limit=${limit}&offset=${offset}`);
   }
 
   getDetail(name: string): Observable<any> {
