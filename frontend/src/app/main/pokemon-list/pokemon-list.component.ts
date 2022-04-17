@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { tap } from 'rxjs';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Observable, tap } from 'rxjs';
 import { DataService } from 'src/app/core/services/data.service';
 
 @Component({
@@ -9,13 +10,21 @@ import { DataService } from 'src/app/core/services/data.service';
 })
 export class PokemonListComponent implements OnInit {
   pokemons: any[] = [];
+  page = 1;
+  totalPokemons!: number;
+
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    this.getPokemons();
+  }
+
+  getPokemons() {
     this.dataService
-      .getAllPokemons()
+      .getAllPokemons(12, this.page + 0)
       .pipe(
         tap((data) => {
+          this.totalPokemons = data.count;
           data.results.forEach((result: any) => {
             this.dataService
               .getDetail(result.name)

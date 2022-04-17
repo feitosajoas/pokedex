@@ -1,23 +1,19 @@
-<div class="container">
+<div class="container mb-5">
   <div class="text-center">
     <img src="/assets/images/image-topo.png" height="250" alt="">
-    <form class="example-form">
-      <mat-form-field class="custom-width" appearance="outline">
-        <mat-icon matPrefix>search</mat-icon>
-        <mat-label>Pesquise um pokémon</mat-label>
-        <input type="tel" matInput placeholder="Evee" width="500">
-      </mat-form-field>
-    </form>
   </div>
 
   <div class="mt-5">
     <div class="row">
-      <div class="col-md-4 mb-3" *ngFor="let pokemon of pokemons">
+      <div class="col-md-4 mb-3" *ngFor="let pokemon of pokemons | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalPokemons }">
         <app-pokemon-card [name]="pokemon.name" [types]="pokemon.types" [health]="pokemon.stats[0].base_stat" [height]="pokemon.height"
           [attackPower]="pokemon.stats[1].base_stat" [image]="pokemon.sprites.other.dream_world.front_default"></app-pokemon-card>
       </div>
 
     </div>
   </div>
-
+  <div class="pb-5">
+    <pagination-controls class="text-center" (pageChange)="page = $event; pokemons = []; getPokemons()"></pagination-controls>
+  </div>
 </div>
+
