@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col-md-4 mb-3" *ngFor="let pokemon of pokemons">
         <app-pokemon-card [name]="pokemon.name" [types]="pokemon.types" [health]="pokemon.stats[0].base_stat" [height]="pokemon.height"
-          [attackPower]="pokemon.stats[1].base_stat" [image]="pokemon.sprites.front_default"></app-pokemon-card>
+          [attackPower]="pokemon.stats[1].base_stat" [image]="pokemon.sprites.other.dream_world.front_default"></app-pokemon-card>
       </div>
 
     </div>
