@@ -1,3 +1,5 @@
+import { PokemonDetail } from './../../core/models/poemon-detail.model';
+import { PokemonList } from './../../core/models/pokemon-list.model';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Observable, tap } from 'rxjs';
@@ -9,7 +11,7 @@ import { DataService } from 'src/app/core/services/data.service';
   styleUrls: ['./pokemon-list.component.scss']
 })
 export class PokemonListComponent implements OnInit {
-  pokemons: any[] = [];
+  pokemons: PokemonDetail[] = [];
   page = 1;
   totalPokemons!: number;
 
@@ -25,7 +27,7 @@ export class PokemonListComponent implements OnInit {
       .pipe(
         tap((data) => {
           this.totalPokemons = data.count;
-          data.results.forEach((result: any) => {
+          data.results.forEach((result: PokemonDetail) => {
             this.dataService
               .getDetail(result.name)
               .pipe(
