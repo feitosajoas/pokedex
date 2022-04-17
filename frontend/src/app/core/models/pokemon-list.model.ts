@@ -1,6 +1,8 @@
 export class PokemonList {
   name: string;
-  url: any;
+  url!: any;
+  count!: number;
+  results: any;
 
   constructor() {
       this.name = '';
