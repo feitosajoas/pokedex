@@ -24,3 +24,4 @@ Feito todos esses passos, a seguinte tela deverá aparecer:
 #### 2 - Implementação de uma página para listar apenas pokémons favoritos.
 #### 3 - Card customizado igual ao Pokémon GO:
 > ![image](https://user-images.githubusercontent.com/49026950/163848783-3475e488-0ae6-4ab0-957c-a7bc4f57541a.png)
+#### 4 - Informar mais detalhes dos pokémons, como por exemplo: Tipos que são fortes contra, tipos que são fracos contra, velocidade de ataque, poder mais efetivo e etc...
