@@ -1,4 +1,4 @@
-# pokedex
+# Pokedex
 
 ## Passos para executar o projeto:
 
@@ -16,3 +16,11 @@
 
 Feito todos esses passos, a seguinte tela deverá aparecer:
 ![image](https://user-images.githubusercontent.com/49026950/163847447-e5376ab3-4647-496f-889b-21d59b78ccbe.png)
+
+
+## TODO:
+### Lista de implementações para a v2 que será melhorado na pokédex:
+#### 1 - Implementação de barra de busca de um respectivo pokémon.
+#### 2 - Implementação de uma página para listar apenas pokémons favoritos.
+#### 3 - Card customizado igual ao Pokémon GO:
+> ![image](https://user-images.githubusercontent.com/49026950/163848783-3475e488-0ae6-4ab0-957c-a7bc4f57541a.png)
