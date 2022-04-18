@@ -5,7 +5,8 @@
 
   <div class="mt-5">
     <div class="row">
-      <div class="col-md-4 mb-3" *ngFor="let pokemon of pokemons | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalPokemons }">
+      <div class="col-md-4 mb-3"
+        *ngFor="let pokemon of pokemons | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalPokemons }">
         <app-pokemon-card [name]="pokemon.name" [types]="pokemon.types" [health]="pokemon.stats[0].base_stat" [height]="pokemon.height"
           [attackPower]="pokemon.stats[1].base_stat" [image]="pokemon.sprites.other.dream_world.front_default"></app-pokemon-card>
       </div>
@@ -16,4 +17,3 @@
     <pagination-controls class="text-center" (pageChange)="page = $event; pokemons = []; getPokemons()"></pagination-controls>
   </div>
 </div>
-

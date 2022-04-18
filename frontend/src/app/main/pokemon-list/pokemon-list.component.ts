@@ -1,9 +1,7 @@
-import { PokemonDetail } from './../../core/models/poemon-detail.model';
-import { PokemonList } from './../../core/models/pokemon-list.model';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { Observable, tap } from 'rxjs';
+import { tap } from 'rxjs';
 import { DataService } from 'src/app/core/services/data.service';
+import { PokemonDetail } from './../../core/models/poemon-detail.model';
 
 @Component({
   selector: 'app-pokemon-list',

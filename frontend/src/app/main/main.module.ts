@@ -9,6 +9,14 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 
 @NgModule({
   declarations: [PokemonListComponent],
-  imports: [CommonModule, MatInputModule, SharedModule, MatIconModule, NgxPaginationModule, FormsModule, ReactiveFormsModule]
+  imports: [
+    CommonModule,
+    MatInputModule,
+    SharedModule,
+    MatIconModule,
+    NgxPaginationModule,
+    FormsModule,
+    ReactiveFormsModule
+  ]
 })
 export class MainModule {}

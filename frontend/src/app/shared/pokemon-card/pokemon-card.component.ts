@@ -35,7 +35,6 @@ export class PokemonCardComponent implements OnInit {
   }
 
   hasFavorite() {
-    return CookieHelper.getFavoritePokemons(this.name) ? this.isFavorite = true : this.isFavorite = false;
+    return CookieHelper.getFavoritePokemons(this.name) ? (this.isFavorite = true) : (this.isFavorite = false);
   }
 }
-
